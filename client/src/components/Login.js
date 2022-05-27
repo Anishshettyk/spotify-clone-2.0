@@ -42,7 +42,7 @@ const StyledLoginContainer = styled(Main)`
 const LoginURL =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:8888/login"
-    : "https://spotify-clone-rne.herokuapp.com/login";
+    : "https://spotify-clone-final-project.herokuapp.com/login";
 
 const Login = () => (
   <StyledLoginContainer>

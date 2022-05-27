@@ -34,7 +34,8 @@ const refreshAccessToken = async () => {
             window.location.href = "http://localhost:3000";
           }
           if (process.env.NODE_ENV === "production") {
-            window.location.href = "https://spotify-clone-rne.herokuapp.com";
+            window.location.href =
+              "https://spotify-clone-final-project.herokuapp.com";
           }
         }
       });
@@ -92,7 +93,7 @@ export const logout = () => {
     window.location.href = "http://localhost:3000";
   }
   if (process.env.NODE_ENV === "production") {
-    window.location.href = "https://spotify-clone-rne.herokuapp.com";
+    window.location.href = "https://spotify-clone-final-project.herokuapp.com";
   }
 };
 
