@@ -74,7 +74,7 @@ const AlbumPreviewLarge = ({ AlbumID, track }) => {
       musicArtistId: artists[0].id,
       musicPreviewUrl: preview_url,
       musicID: id,
-      externalURL: external_urls.spotify,
+      externalURL: external_urls?.spotify,
     };
     return playerData;
   };

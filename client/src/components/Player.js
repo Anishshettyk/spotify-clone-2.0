@@ -313,6 +313,13 @@ const Player = () => {
     }
   };
 
+  const shareLink = (url) => {
+    navigator?.clipboard.writeText(url);
+    setSnackBarMessage("Link copied to clipboard");
+    setSnackBarType("success");
+    setOpen(true);
+  };
+
   return (
     <div>
       <Helmet>
@@ -396,7 +403,10 @@ const Player = () => {
             </Tooltip>
 
             <Tooltip title="Share track">
-              <ShareIcon style={{ fontSize: 20, color: colors.blue }} />
+              <ShareIcon
+                style={{ fontSize: 20, color: colors.blue }}
+                onClick={() => shareLink(playerDataObtained?.externalURL)}
+              />
             </Tooltip>
           </div>
           {playerDataObtained && (

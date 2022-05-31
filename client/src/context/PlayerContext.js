@@ -39,9 +39,7 @@ const PlayerProvider = ({ children }) => {
         preview_url,
         id,
       },
-      context: {
-        external_urls: { spotify },
-      },
+      context,
     } = playerData;
 
     initialState.playerData.musicPreviewUrl = preview_url;
@@ -50,7 +48,7 @@ const PlayerProvider = ({ children }) => {
     initialState.playerData.musicArtistName = artists[0].name;
     initialState.playerData.musicArtistId = artists[0].id;
     initialState.playerData.musicID = id;
-    initialState.playerData.externalURL = spotify;
+    initialState.playerData.externalURL = context?.external_urls?.spotify;
   }
 
   const playClickedMusic = (playerData) => {
